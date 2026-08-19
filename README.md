@@ -1376,7 +1376,7 @@ The trade-off that should drive this decision at every stage is the same one: do
 
 ---
 
-## Interview-Level Questions
+## Key Design Decisions to Remember
 
 **1. Why do we need the Outbox pattern?**
 Because a database transaction and a Kafka publish are two independent systems with no shared atomicity guarantee. The outbox pattern achieves atomicity by writing the event as a row in the same local database transaction as the business data, then relaying it to Kafka asynchronously.
